@@ -10,5 +10,17 @@ publish = false
 log.workspace = true
 tracing.workspace = true
 
+<<<<<<< HEAD
 cairo-lang-syntax-codegen = { path = "../../cairo-lang-syntax-codegen", version = "=2.15.0" }
 cairo-lang-utils = { path = "../../cairo-lang-utils", version = "=2.15.0", features = ["tracing"] }
+||||||| 304737fe8
+cairo-lang-utils = { path = "../../cairo-lang-utils", version = "~2.12.3", features = [
+    "env_logger",
+] }
+cairo-lang-syntax-codegen = { path = "../../cairo-lang-syntax-codegen", version = "~2.12.3" }
+=======
+cairo-lang-utils = { path = "../../cairo-lang-utils", version = "~2.12.4", features = [
+    "env_logger",
+] }
+cairo-lang-syntax-codegen = { path = "../../cairo-lang-syntax-codegen", version = "~2.12.4" }
+>>>>>>> origin/dev-v2.12.4

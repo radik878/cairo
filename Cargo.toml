@@ -90,7 +90,19 @@ members = [
 exclude = ["ensure-no_std"]
 
 [workspace.package]
+<<<<<<< HEAD
 edition = "2024"
+||||||| 304737fe8
+version = "2.12.3"
+edition = "2021"
+rust-version = "1.86"
+repository = "https://github.com/starkware-libs/cairo/"
+=======
+version = "2.12.4"
+edition = "2021"
+rust-version = "1.86"
+repository = "https://github.com/starkware-libs/cairo/"
+>>>>>>> origin/dev-v2.12.4
 license = "Apache-2.0"
 license-file = "LICENSE"
 repository = "https://github.com/starkware-libs/cairo/"
