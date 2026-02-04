@@ -11,7 +11,6 @@ anyhow.workspace = true
 clap.workspace = true
 mimalloc = { workspace = true, optional = true }
 
-<<<<<<< HEAD
 cairo-lang-compiler = { path = "../../cairo-lang-compiler", version = "=2.15.0" }
 cairo-lang-diagnostics = { path = "../../cairo-lang-diagnostics", version = "=2.15.0" }
 cairo-lang-filesystem = { path = "../../cairo-lang-filesystem", version = "=2.15.0" }
@@ -21,18 +20,3 @@ cairo-lang-starknet = { path = "../../cairo-lang-starknet", version = "=2.15.0" 
 
 [features]
 mimalloc = ["dep:mimalloc"]
-||||||| 304737fe8
-cairo-lang-compiler = { path = "../../cairo-lang-compiler", version = "~2.12.3" }
-cairo-lang-diagnostics = { path = "../../cairo-lang-diagnostics", version = "~2.12.3" }
-cairo-lang-filesystem = { path = "../../cairo-lang-filesystem", version = "~2.12.3" }
-cairo-lang-runner = { path = "../../cairo-lang-runner", version = "~2.12.3" }
-cairo-lang-sierra-generator = { path = "../../cairo-lang-sierra-generator", version = "~2.12.3" }
-cairo-lang-starknet = { path = "../../cairo-lang-starknet", version = "~2.12.3" }
-=======
-cairo-lang-compiler = { path = "../../cairo-lang-compiler", version = "~2.12.4" }
-cairo-lang-diagnostics = { path = "../../cairo-lang-diagnostics", version = "~2.12.4" }
-cairo-lang-filesystem = { path = "../../cairo-lang-filesystem", version = "~2.12.4" }
-cairo-lang-runner = { path = "../../cairo-lang-runner", version = "~2.12.4" }
-cairo-lang-sierra-generator = { path = "../../cairo-lang-sierra-generator", version = "~2.12.4" }
-cairo-lang-starknet = { path = "../../cairo-lang-starknet", version = "~2.12.4" }
->>>>>>> origin/dev-v2.12.4

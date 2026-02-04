@@ -2,16 +2,8 @@ use std::any::Any;
 use std::borrow::Cow;
 use std::collections::{HashMap, VecDeque};
 use std::ops::{Shl, Sub};
-<<<<<<< HEAD
 use std::sync::Arc;
 use std::vec::IntoIter;
-||||||| 304737fe8
-use std::vec::IntoIter;
-use std::rc::Rc;
-=======
-use std::rc::Rc;
-use std::vec::IntoIter;
->>>>>>> origin/dev-v2.12.4
 
 use ark_ff::{BigInteger, PrimeField};
 use cairo_lang_casm::hints::{CoreHint, DeprecatedHint, ExternalHint, Hint, StarknetHint};

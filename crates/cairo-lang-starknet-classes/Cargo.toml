@@ -7,7 +7,6 @@ license-file.workspace = true
 description = "Starknet definitions for contract classes."
 
 [dependencies]
-<<<<<<< HEAD
 cairo-lang-casm = { path = "../cairo-lang-casm", version = "=2.15.0", default-features = true, features = [
   "serde",
 ] }
@@ -15,17 +14,6 @@ cairo-lang-sierra = { path = "../cairo-lang-sierra", version = "=2.15.0" }
 cairo-lang-sierra-to-casm = { path = "../cairo-lang-sierra-to-casm", version = "=2.15.0" }
 cairo-lang-sierra-type-size = { path = "../cairo-lang-sierra-type-size", version = "=2.15.0" }
 cairo-lang-utils = { path = "../cairo-lang-utils", version = "=2.15.0", features = ["tracing"] }
-||||||| 304737fe8
-cairo-lang-casm = { path = "../cairo-lang-casm", version = "~2.12.3", default-features = true, features = ["serde"] }
-cairo-lang-sierra = { path = "../cairo-lang-sierra", version = "~2.12.3" }
-cairo-lang-sierra-to-casm = { path = "../cairo-lang-sierra-to-casm", version = "~2.12.3" }
-cairo-lang-utils = { path = "../cairo-lang-utils", version = "~2.12.3" }
-=======
-cairo-lang-casm = { path = "../cairo-lang-casm", version = "~2.12.4", default-features = true, features = ["serde"] }
-cairo-lang-sierra = { path = "../cairo-lang-sierra", version = "~2.12.4" }
-cairo-lang-sierra-to-casm = { path = "../cairo-lang-sierra-to-casm", version = "~2.12.4" }
-cairo-lang-utils = { path = "../cairo-lang-utils", version = "~2.12.4" }
->>>>>>> origin/dev-v2.12.4
 convert_case.workspace = true
 itertools = { workspace = true, default-features = true }
 num-bigint = { workspace = true, default-features = true }

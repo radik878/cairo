@@ -11,19 +11,9 @@ anyhow.workspace = true
 clap.workspace = true
 mimalloc = { workspace = true, optional = true }
 
-<<<<<<< HEAD
 cairo-lang-compiler = { path = "../../cairo-lang-compiler", version = "=2.15.0" }
 cairo-lang-starknet = { path = "../../cairo-lang-starknet", version = "=2.15.0" }
 cairo-lang-starknet-classes = { path = "../../cairo-lang-starknet-classes", version = "=2.15.0" }
 
 [features]
 mimalloc = ["dep:mimalloc"]
-||||||| 304737fe8
-cairo-lang-compiler = { path = "../../cairo-lang-compiler", version = "~2.12.3" }
-cairo-lang-starknet = { path = "../../cairo-lang-starknet", version = "~2.12.3" }
-cairo-lang-starknet-classes = { path = "../../cairo-lang-starknet-classes", version = "~2.12.3" }
-=======
-cairo-lang-compiler = { path = "../../cairo-lang-compiler", version = "~2.12.4" }
-cairo-lang-starknet = { path = "../../cairo-lang-starknet", version = "~2.12.4" }
-cairo-lang-starknet-classes = { path = "../../cairo-lang-starknet-classes", version = "~2.12.4" }
->>>>>>> origin/dev-v2.12.4
