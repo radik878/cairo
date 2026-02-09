@@ -32,7 +32,7 @@ const OPCODE_ASSERT_EQ_BIT: i32 = 14;
 const OPCODE_EXT_OFFSET: u64 = 63;
 
 impl InstructionRepr {
-    pub fn encode(&self) -> Vec<BigInt> {
+    pub fn encode(self) -> Vec<BigInt> {
         // Convert the offsets from possibly negative numbers in the range [-2^15, 2^15)
         // to positive numbers in the range [0, 2^16) centered around 2^15.
         let off0_enc: u64 = ((self.off0 as i32) + (1 << (OFFSET_BITS - 1))) as u64;
@@ -125,10 +125,6 @@ impl InstructionRepr {
             }
             OpcodeExtension::QM31 => bigint_encoding |= BigInt::from(3) << OPCODE_EXT_OFFSET,
         };
-        if let Some(imm) = self.imm.clone() {
-            vec![bigint_encoding, imm]
-        } else {
-            vec![bigint_encoding]
-        }
+        if let Some(imm) = self.imm { vec![bigint_encoding, imm] } else { vec![bigint_encoding] }
     }
 }
