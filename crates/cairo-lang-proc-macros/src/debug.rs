@@ -42,7 +42,7 @@ fn emit_struct_debug(
 ) -> TokenStream2 {
     let (pat, prints) = emit_fields_debug(db, name.to_string(), &structure.fields);
 
-    // a) impl-side generics  = original + 'a + T
+    // a) impl-side generics = original + 'db
     let impl_generics = create_impl_generics(name, generics);
     let (impl_g, _, where_g) = impl_generics.split_for_impl();
 
