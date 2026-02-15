@@ -615,7 +615,7 @@ fn create_node_for_value<'db>(
     };
 
     // First, construct a node that handles the otherwise patterns.
-    let mut current_node = build_node_callback(graph, otherwise_filter.clone(), "_".into());
+    let mut current_node = build_node_callback(graph, otherwise_filter, "_".into());
 
     // Go over the literals (in reverse order), and construct a chain of [BooleanIf] nodes that
     // handle each literal.
