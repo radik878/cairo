@@ -90,7 +90,7 @@ fn build_enum_init(
     let num_padding = enum_size - 1 - variant_size;
     let inner_value = chain!(
         repeat_n(CellExpression::Immediate(BigInt::from(0)), num_padding as usize),
-        init_arg_cells.clone(),
+        init_arg_cells.iter().cloned(),
     )
     .collect();
 
