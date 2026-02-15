@@ -144,7 +144,7 @@ pub struct StarknetState {
     logs: HashMap<Felt252, ContractLogs>,
     /// The simulated execution info.
     exec_info: ExecutionInfo,
-    /// A mock history, mapping block number to the class hash.
+    /// A mock history, mapping block number to the block hash.
     block_hash: HashMap<u64, Felt252>,
 }
 impl StarknetState {
@@ -986,7 +986,7 @@ impl CairoHintProcessor<'_> {
         Ok(SyscallResult::Success(vec![]))
     }
 
-    /// Executes the `send_message_to_l1_event_syscall` syscall.
+    /// Executes the `send_message_to_l1_syscall` syscall.
     fn send_message_to_l1(
         &mut self,
         gas_counter: &mut usize,
