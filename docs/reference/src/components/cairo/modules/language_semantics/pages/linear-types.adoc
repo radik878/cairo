@@ -33,7 +33,8 @@ fn main() {
 }
 ----
 
-Note: the snapshot operator `@` (See the docs about snapshot) is considered not moving a value.
+Note: the snapshot operator `@` (see xref:memory-model.adoc##snapshots-and-desnap[Snapshots and desnap])
+is considered not moving a value.
 
 == Clone
 Sometimes a value can't be trivially copied, but we can still use code to build a copy of it.
