@@ -67,7 +67,6 @@ pub fn test(_attr: TokenStream, item: TokenStream) -> TokenStream {
 #[proc_macro_attribute]
 pub fn interned(attr: TokenStream, item: TokenStream) -> TokenStream {
     let parser = Punctuated::<Meta, Token![,]>::parse_terminated;
-    #[allow(unused_mut)]
     let mut args: Punctuated<Meta, Token![,]> =
         if attr.is_empty() { Punctuated::new() } else { parser.parse(attr).unwrap() };
 
@@ -92,7 +91,6 @@ pub fn interned(attr: TokenStream, item: TokenStream) -> TokenStream {
 #[proc_macro_attribute]
 pub fn tracked(attr: TokenStream, item: TokenStream) -> TokenStream {
     let parser = Punctuated::<Meta, Token![,]>::parse_terminated;
-    #[allow(unused_mut)]
     let mut args: Punctuated<Meta, Token![,]> =
         if attr.is_empty() { Punctuated::new() } else { parser.parse(attr).unwrap() };
 
