@@ -219,18 +219,17 @@ fn generate_ast_code() -> rust::Tokens {
         #[path = "ast_ext.rs"]
         mod ast_ext;
     };
-    let spec_clone = spec.clone();
-    let all_tokens: Vec<_> =
-        spec_clone.iter().filter(|node| matches!(node.kind, NodeKind::Terminal { .. })).collect();
+    let all_token_variants: Vec<_> = spec
+        .iter()
+        .filter(|node| matches!(node.kind, NodeKind::Terminal { .. }))
+        .map(|node| Variant { name: node.name.clone(), kind: node.name.clone() })
+        .collect();
     for Node { name, kind } in spec {
         tokens.extend(match kind {
             NodeKind::Enum { variants, missing_variant } => {
                 let variants_list = match variants {
                     Variants::List(variants) => variants,
-                    Variants::AllTokens => all_tokens
-                        .iter()
-                        .map(|node| Variant { name: node.name.clone(), kind: node.name.clone() })
-                        .collect(),
+                    Variants::AllTokens => all_token_variants.clone(),
                 };
                 gen_enum_code(name, variants_list, missing_variant)
             }
