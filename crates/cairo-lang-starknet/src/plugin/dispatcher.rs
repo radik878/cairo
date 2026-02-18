@@ -407,7 +407,8 @@ fn declaration_method_impl<'db>(
     ret_decode: &str,
     unwrap: bool,
 ) -> RewriteNode<'db> {
-    let deserialization_code = if ret_decode.is_empty() {
+    let ret_decode_is_empty = ret_decode.is_empty();
+    let deserialization_code = if ret_decode_is_empty {
         RewriteNode::text("()")
     } else {
         RewriteNode::Text(if unwrap {
@@ -422,7 +423,7 @@ fn declaration_method_impl<'db>(
                 "let mut {RET_DATA} = starknet::SyscallResultTrait::unwrap_syscall({RET_DATA});
         $deserialization_code$"
             )
-        } else if ret_decode.is_empty() {
+        } else if ret_decode_is_empty {
             format!(
                 "let mut {RET_DATA} = {RET_DATA}?;
         Result::Ok($deserialization_code$)"
